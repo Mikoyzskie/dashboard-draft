@@ -2,18 +2,12 @@ import Image from "next/image"
 import Link from "next/link"
 import {
     File,
-    Home,
-    LineChart,
+
     ListFilter,
     MoreHorizontal,
-    Package,
-    Package2,
-    PanelLeft,
+
     PlusCircle,
-    Search,
-    Settings,
-    ShoppingCart,
-    Users2,
+
 } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
@@ -59,9 +53,6 @@ import {
 } from "@/components/ui/tabs"
 import Sidebar from "../Sidebar"
 import Header from "@/components/Header"
-
-const slugify = require("slugify")
-
 
 
 export function Products() {

@@ -173,8 +173,6 @@ export function Orders() {
                             </Card>
                         </div>
 
-
-
                         <OrderTable />
                     </div>
                     <OrderPanel />

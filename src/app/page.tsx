@@ -38,7 +38,7 @@ export default function Home() {
               </div>
               <Input id="password" type="password" required />
             </div>
-            <Link href={"/orders"}>
+            <Link href={"/dashboard"}>
               <Button type="submit" className="w-full">
                 Login
               </Button>

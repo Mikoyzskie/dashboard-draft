@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import {
     Activity,
     ArrowUpRight,
@@ -81,11 +82,15 @@ export default function Dashboard() {
             <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
                 <nav className="flex flex-col items-center gap-4 px-2 sm:py-4">
                     <Link
-                        href="#"
-                        className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
+                        href="/"
+                        className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
                     >
-                        <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
-                        <span className="sr-only">Acme Inc</span>
+                        <Image
+                            src="/logo.png"
+                            alt="Logo"
+                            height={36}
+                            width={36}
+                        />
                     </Link>
                     {
                         menus.map((menu, index: number) => {
@@ -115,7 +120,7 @@ export default function Dashboard() {
                         <Tooltip>
                             <TooltipTrigger asChild>
                                 <Link
-                                    href="#"
+                                    href="/settings"
                                     className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                                 >
                                     <Settings className="h-5 w-5" />
@@ -145,7 +150,7 @@ export default function Dashboard() {
                         <Card x-chunk="dashboard-01-chunk-0">
                             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                                 <CardTitle className="text-sm font-medium">
-                                    Total Revenue
+                                    Actual Sales
                                 </CardTitle>
                                 <DollarSign className="h-4 w-4 text-muted-foreground" />
                             </CardHeader>
@@ -156,20 +161,7 @@ export default function Dashboard() {
                                 </p>
                             </CardContent>
                         </Card>
-                        <Card x-chunk="dashboard-01-chunk-1">
-                            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                                <CardTitle className="text-sm font-medium">
-                                    Subscriptions
-                                </CardTitle>
-                                <Users className="h-4 w-4 text-muted-foreground" />
-                            </CardHeader>
-                            <CardContent>
-                                <div className="text-2xl font-bold">+2350</div>
-                                <p className="text-xs text-muted-foreground">
-                                    +180.1% from last month
-                                </p>
-                            </CardContent>
-                        </Card>
+
                         <Card x-chunk="dashboard-01-chunk-2">
                             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                                 <CardTitle className="text-sm font-medium">Sales</CardTitle>
@@ -182,13 +174,27 @@ export default function Dashboard() {
                                 </p>
                             </CardContent>
                         </Card>
+                        <Card x-chunk="dashboard-01-chunk-1">
+                            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                                <CardTitle className="text-sm font-medium">
+                                    Activities
+                                </CardTitle>
+                                <Users className="h-4 w-4 text-muted-foreground" />
+                            </CardHeader>
+                            <CardContent>
+                                <div className="text-2xl font-bold">+2350</div>
+                                <p className="text-xs text-muted-foreground">
+                                    +180.1% from last month
+                                </p>
+                            </CardContent>
+                        </Card>
                         <Card x-chunk="dashboard-01-chunk-3">
                             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                                <CardTitle className="text-sm font-medium">Active Now</CardTitle>
+                                <CardTitle className="text-sm font-medium">Ave. Response Time</CardTitle>
                                 <Activity className="h-4 w-4 text-muted-foreground" />
                             </CardHeader>
                             <CardContent>
-                                <div className="text-2xl font-bold">+573</div>
+                                <div className="text-2xl font-bold">30mins</div>
                                 <p className="text-xs text-muted-foreground">
                                     +201 since last hour
                                 </p>

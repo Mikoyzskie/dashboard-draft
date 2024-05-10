@@ -44,7 +44,7 @@ export default function Home() {
               </Button>
             </Link>
             <Button variant="outline" className="w-full">
-              Login with Google
+              Login with Microsoft
             </Button>
           </div>
           <div className="mt-4 text-center text-sm">
